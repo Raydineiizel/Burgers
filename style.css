@@ -15,18 +15,26 @@ body {
     gap: 20px;    
 }
 button {
-    background-color: #3B4356;
+    background-color: #E2E2E2;
     border: none;
     border-radius: 30px;
-    color: #ffffff;
+    color: #2d2427;
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
     width: 110px;
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Transição suave para animações */
+    box-shadow: 12px 12px 10px rgba(36, 40, 52, .4);
 }
 button:hover {
-    background-color: #181F31;
+    background-color: #F3F3F3;
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
+/* Efeito rápido no momento exato do clique */
+button:active {
+    background-color: rgba(250, 250, 250, .4);
+    transform: scale(0.95); /* Encolhe levemente o botão simulando um clique físico */
+}    
 ul {
     list-style: none;
     display: grid;
@@ -35,9 +43,9 @@ ul {
     justify-content: center;
 }
 li {
-    background-color: #090F1B;
-    border: 2px solid #2B3449;
-    box-shadow: -15px 15px 30px rgba(36, 40, 52, 1);
+    background-color: #E2E2E2;
+    border: none;
+    box-shadow: 12px 12px 10px rgba(36, 40, 52, .4);
     border-radius: 20px;
     padding: 5px;
 }
@@ -46,9 +54,9 @@ img{
     border-radius: 14px;
 }
 p {
-    color: #ffffff;
+    color: #2D2427;
 }
 .item-price {
     font-weight: bold;
-    color: #F7F7C6;
+    color: #ff9900;
 }
