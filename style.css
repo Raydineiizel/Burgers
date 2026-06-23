@@ -24,7 +24,7 @@ button {
     font-weight: bold;
     width: 110px;
     transition: transform 0.2s ease, opacity 0.2s ease; /* Transição suave para animações */
-    box-shadow: 12px 12px 10px rgba(36, 40, 52, .4);
+    box-shadow: 12px 12px 10px rgba(36, 40, 52, .3);
 }
 button:hover {
     background-color: #F3F3F3;
@@ -45,7 +45,7 @@ ul {
 li {
     background-color: #E2E2E2;
     border: none;
-    box-shadow: 12px 12px 10px rgba(36, 40, 52, .4);
+    box-shadow: 12px 12px 10px rgba(36, 40, 52, .3);
     border-radius: 20px;
     padding: 5px;
 }
