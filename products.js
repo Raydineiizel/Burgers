@@ -1,3 +1,4 @@
+/* PRUDUTOS PARA SEREM USADOS NO SCRIPTS PRINCIPAL */
 const menuOptions = [
 
 { name: 'X-Salada', price: 30, vegan: false, src: './assets/xsalada.png' },
