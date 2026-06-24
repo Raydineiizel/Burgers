@@ -1,3 +1,4 @@
+/* CONFIGURAÇÕES GERAIS E RESET*/
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +8,14 @@
 body {
     background: url(./assets/BG.png);
 }
+/* SEÇÃO DE BOTÕES (DESKTOP)*/
 .container-buttons {
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;    
+    margin: 30px auto; 
+    max-width: 640px;  /* Limita a largura total para alinhar EXATAMENTE com o limite dos 3 cards (3x200px + 2x20px de gap) */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais, distribuindo os 4 botões no limite do container */
+    gap: 20px; 
+    padding: 0 20px;
 }
 button {
     background-color: #E2E2E2;
@@ -22,26 +25,30 @@ button {
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
-    width: 110px;
-    transition: transform 0.2s ease, opacity 0.2s ease; /* Transição suave para animações */
+    width: 100%;       /* O botão se adapta dinamicamente à largura da sua coluna do Grid */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Suaviza as animações de hover e clique */
     box-shadow: 12px 12px 10px rgba(36, 40, 52, .3);
 }
+/* Efeito ao passar o mouse */
 button:hover {
     background-color: #F3F3F3;
     transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
-/* Efeito rápido no momento exato do clique */
+/* Efeito ao clicar */
 button:active {
     background-color: rgba(250, 250, 250, .4);
-    transform: scale(0.95); /* Encolhe levemente o botão simulando um clique físico */
+    transform: scale(0.95); /* Encolhe levemente simulando um clique físico */
 }    
+/* SEÇÃO DE CARDS DA LISTA (DESKTOP)          */
 ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px; /* Mantém as 3 colunas fixas de 200px no computador */
     gap: 20px;
     justify-content: center;
+    padding: 0 20px;
 }
+
 li {
     background-color: #E2E2E2;
     border: none;
@@ -49,14 +56,38 @@ li {
     border-radius: 20px;
     padding: 5px;
 }
-img{
+
+img {
     width: 100%;
     border-radius: 14px;
 }
+
 p {
     color: #2D2427;
 }
+
 .item-price {
     font-weight: bold;
     color: #ff9900;
+}
+
+/* CONFIGURAÇÃO RESPONSIVA (SMARTPHONES)*/
+@media (max-width: 768px) {
+    
+    /* Configura os 4 botões para dividirem-se em duas colunas no celular (2 em cima, 2 embaixo) */
+    .container-buttons {
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px;
+    }
+
+    /* Redefine os cards para duas colunas no celular, acompanhando a quebra dos botões */
+    ul {
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+    }
+
+    /* Aumenta o espaçamento interno do card no celular para destacar os textos */
+    li {
+        padding: 10px;
+    }
 }
