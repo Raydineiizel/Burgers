@@ -98,11 +98,11 @@ p {
     ul {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
+        margin-bottom: 50px;
     }
 
     /* Aumenta o espaçamento interno do card no celular para destacar os textos */
     li {
         padding: 10px;
-        margin-top: 0px;
     }
 }
