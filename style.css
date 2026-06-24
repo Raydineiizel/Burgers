@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais, distribuindo os 4 botões no limite do container */
     gap: 20px; 
-    padding: 0 20px;
+    padding: 0;
 }
 button {
     background-color: #E2E2E2;
@@ -78,6 +78,7 @@ p {
     .container-buttons {
         grid-template-columns: 1fr 1fr; 
         gap: 15px;
+        padding: 20px;
     }
 
     /* Redefine os cards para duas colunas no celular, acompanhando a quebra dos botões */
