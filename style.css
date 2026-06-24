@@ -90,5 +90,6 @@ p {
     /* Aumenta o espaçamento interno do card no celular para destacar os textos */
     li {
         padding: 10px;
+        margin-top: 0px;
     }
 }
